@@ -1,5 +1,11 @@
 <div class="card">
     <img [src]="product.photo" [alt]="product.title" width="240" height="320">
+    <div class="discount-badge" *ngIf="product.discount > 0">
+        -{{ product.discount }}%
+    </div>
+    <div class="tags" *ngIf="product.tags && product.tags.length > 0">
+        <span class="" *ngFor="let tag of product.tags">{{ tag }}</span>
+    </div>
     <h2 class="card-title">{{ product.title }}</h2>
     <div class="price-container">
         <div>
