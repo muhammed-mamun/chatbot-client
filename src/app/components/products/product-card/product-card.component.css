@@ -1,0 +1,40 @@
+.card {
+  padding: 16px;
+  border: 1px solid #e8e8e8;
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.card-title {
+  font-size: 23px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: #2b303a;
+  margin-bottom: 6px;
+}
+.price-container {
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.price-wrape {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+}
+.discount-price {
+  font-size: 20px;
+  color: #ff4b37;
+}
+.price {
+  font-size: 16px;
+  color: #767676;
+  text-decoration: line-through;
+}
+
+.rating {
+  margin-top: -20px;
+}

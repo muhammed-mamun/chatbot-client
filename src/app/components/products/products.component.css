@@ -1,0 +1,25 @@
+.section-container {
+  padding: 78px 100px 100px 100px;
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+}
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  /* color: #2b303a; */
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+.section-description {
+  margin-bottom: 20px;
+}
+
+.product-container {
+  width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
