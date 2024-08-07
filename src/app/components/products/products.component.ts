@@ -57,7 +57,7 @@ export class ProductsComponent {
       discountPrice: 62.99,
       title: "Product 6",
       tags:[],
-      discount: 20
+      discount: 0
     },
     {
       photo: "/assets/images/products/p7.png",
@@ -73,7 +73,7 @@ export class ProductsComponent {
       discountPrice: 84.99,
       title: "Product 8",
       tags:['Run', 'Dress'],
-      discount: 20
+      discount: 0
     }
   ];
 }
