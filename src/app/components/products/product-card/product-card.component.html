@@ -1,26 +1,39 @@
 <div class="card">
-    <img [src]="product.photo" [alt]="product.title" width="240" height="320">
-    <div class="discount-badge" *ngIf="product.discount > 0">
-        -{{ product.discount }}%
-    </div>
-    <div class="tags" *ngIf="product.tags && product.tags.length > 0">
-        <span class="" *ngFor="let tag of product.tags">{{ tag }}</span>
-    </div>
-    <h2 class="card-title">{{ product.title }}</h2>
-    <div class="price-container">
+  <img [src]="product.photo" [alt]="product.title" width="240" height="320" />
+
+  <div class="discount-badge" *ngIf="product.discount > 0">
+    -{{ product.discount }}%
+  </div>
+
+  <div class="tags">
+    @if(product.tags && product.tags.length){
+    <span class="" *ngFor="let tag of product.tags">{{ tag }}</span>
+    }@else {
+    <span style="visibility: hidden">.</span>
+    }
+  </div>
+
+  <h2 class="card-title">{{ product.title }}</h2>
+
+  <div class="price-container">
+    <div>
+      <div class="price-wrape">
+        <p class="discount-price">${{ product.discountPrice }}</p>
+        <p class="price">${{ product.price }}</p>
+        
         <div>
-            <div class="price-wrape">
-                <p class="discount-price">${{ product.discountPrice }}</p>
-                <p class="price">${{ product.price }}</p>
-            </div>
-            <div class="rating">
-                <img src="/assets/images/icons/star-icon.png" alt="star">
-                <img src="/assets/images/icons/star-icon.png" alt="star">
-                <img src="/assets/images/icons/star-icon.png" alt="star">
-                <img src="/assets/images/icons/star-icon.png" alt="star">
-                <img src="/assets/images/icons/star-icon.png" alt="star">
-            </div>
+          @for(rate of ratings; track rate){ @if(rate <= product.ratings){
+          <img src="/assets/images/icons/star-icon.png" alt="star" />
+          } }
         </div>
-        <img src="/assets/images/icons/cart-icon.png" alt="cart-icon" height="40" width="40">
+      </div>
     </div>
+
+    <img
+      src="/assets/images/icons/cart-icon.png"
+      alt="cart-icon"
+      height="40"
+      width="40"
+    />
+  </div>
 </div>
