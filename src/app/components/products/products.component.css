@@ -17,9 +17,37 @@
 }
 
 .product-container {
-  width: 1400px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-items: center;
+}
+
+/* Responsive for mobile */
+@media (max-width: 576px) {
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  .section-container {
+    padding: 72px 32px 100px 32px;
+    background-color: #ffffff;
+    display: grid;
+    justify-items: center;
+  }
+  .section-title {
+    font-size: 30px;
+    font-weight: 900;
+    color: #2b303a;
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+  }
+  .section-description {
+    margin-bottom: 20px;
+    color: #2b303a;
+  }
 }
