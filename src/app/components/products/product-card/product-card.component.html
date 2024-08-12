@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" >
   <img [src]="product.photo" [alt]="product.title" width="240" height="320" />
 
   <div class="discount-badge" *ngIf="product.discount > 0">
@@ -34,6 +34,7 @@
       alt="cart-icon"
       height="40"
       width="40"
+      (click)="onAddToCart()"
     />
   </div>
 </div>

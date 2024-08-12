@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { CommonModule } from '@angular/common';
 
@@ -84,4 +84,11 @@ export class ProductsComponent {
       discount: 0,
     },
   ];
+
+ // Method to handle the product added to cart
+ handleAddToCart(product: any) {
+  console.log('Product added to cart:', product);
+  // Add your logic to handle adding the product to the cart
+}
+
 }
