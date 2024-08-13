@@ -2,6 +2,7 @@ import { Product } from "../interface/product.interface";
 
 export const PRODUCTS_DB: Product[] = [
   {
+    id:0,
     photo:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/2018_Tesla_Model_S_75D.jpg/420px-2018_Tesla_Model_S_75D.jpg',
     price: 19.99,
@@ -12,6 +13,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 5,
   },
   {
+    id:1,
     photo: '/assets/images/products/p2.png',
     price: 29.99,
     discountPrice: 24.99,
@@ -21,6 +23,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 3,
   },
   {
+    id:2,
     photo: '/assets/images/products/p3.png',
     price: 39.99,
     discountPrice: 31.99,
@@ -30,6 +33,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 4,
   },
   {
+    id:3,
     photo: '/assets/images/products/p4.png',
     price: 49.99,
     discountPrice: 44.99,
@@ -39,6 +43,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 3,
   },
   {
+    id:4,
     photo: '/assets/images/products/p5.png',
     price: 59.99,
     discountPrice: 54.99,
@@ -48,6 +53,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 3,
   },
   {
+    id:5,
     photo: '/assets/images/products/p6.png',
     price: 69.99,
     discountPrice: 62.99,
@@ -57,6 +63,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 2,
   },
   {
+    id:6,
     photo: '/assets/images/products/p7.png',
     price: 79.99,
     discountPrice: 74.99,
@@ -66,6 +73,7 @@ export const PRODUCTS_DB: Product[] = [
     ratings: 2,
   },
   {
+    id:7,
     photo: '/assets/images/products/p8.png',
     price: 89.99,
     discountPrice: 84.99,

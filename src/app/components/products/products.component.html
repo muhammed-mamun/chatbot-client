@@ -6,7 +6,7 @@
     suspension, floor and table lights.
   </p>
 
-  <h2>Total Likes: {{ likes }}</h2>
+  <h2>Total Price:${{totalPrice | number: '2.0'}} </h2>
   <div class="product-container">
     <app-product-card *ngFor="let product of products" [product]="product" 
     (passDataEvent)="handleClick($event)" />

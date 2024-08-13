@@ -14,11 +14,23 @@ import { PRODUCTS_DB } from '../../core/db/products.db';
 })
 export class ProductsComponent {
 
-  public likes: number = 0;
+
+  public totalPrice: number = 0;
+  public selectedProducts: Product[] = [];
 
   public handleClick(data?: any){
     console.log('Data from child is', data);
-    this.likes += 1;
+    const existingProductIndex = this.selectedProducts.findIndex(p => p.id === data.id);
+    if (existingProductIndex === -1) {
+      this.selectedProducts.push(data);
+      this.totalPrice += data.price;
+      console.log("Selected Products: ", this.selectedProducts);
+    } else {
+      this.selectedProducts.splice(existingProductIndex, 1);
+      this.totalPrice -= data.price;
+      console.log("Selected Products: ", this.selectedProducts);
+    }
+
   }
   
   public products: Product[] = PRODUCTS_DB;
