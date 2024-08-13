@@ -25,4 +25,11 @@ export class ProductCardComponent {
   //   console.log(PRODUCTS_DB);
     
   // }
+
+  @Output() addToCart = new EventEmitter<any>();
+
+    // Method to handle the add to cart action
+    onAddToCart() {
+      this.addToCart.emit(this.product); // Emit the product object
+    }
 }
