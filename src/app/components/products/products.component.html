@@ -1,9 +1,14 @@
 <div class="section-container">
-    <h2 class="section-title montserrat-font">Top Picks For You</h2>
+  <h2 class="section-title montserrat-font">Top Picks For You</h2>
 
-    <p class="section-description ">find a bright ideal to suit your taste with out great selection of suspension, floor and table lights.</p>
+  <p class="section-description">
+    find a bright ideal to suit your taste with out great selection of
+    suspension, floor and table lights.
+  </p>
 
-    <div class="product-container">
-        <app-product-card *ngFor="let product of products" [product]="product"/>
-    </div>
+  <h2>Total Likes: {{ likes }}</h2>
+  <div class="product-container">
+    <app-product-card *ngFor="let product of products" [product]="product" 
+    (passDataEvent)="handleClick($event)" />
+  </div>
 </div>
