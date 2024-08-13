@@ -7,4 +7,5 @@ export interface Product {
   tags: string[];
   discount: number;
   ratings?: number;
+  isSelected: boolean,
 }

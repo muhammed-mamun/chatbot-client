@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PRODUCTS_DB } from '../../../core/db/products.db';
 
@@ -10,21 +10,22 @@ import { PRODUCTS_DB } from '../../../core/db/products.db';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
+
   @Input() product: any;
   @Output() passDataEvent = new EventEmitter();
 
   public ratings: Number[] = [1, 2, 3, 4, 5];
 
+  public get cardClass() {
+    console.log('isSelected:', this.product.isSelected);
+    return this.product.isSelected ? 'selected-card' : 'card'; // Apply CSS classes based on isSelected
+  }
+
   public handleClick(){
     console.log('Emiting data from ', this.product.title);
     this.passDataEvent.emit(this.product);
+   
   };
-
-  // ngOnInit(){
-  //   console.log('Hello init');
-  //   console.log(PRODUCTS_DB);
-    
-  // }
 
   @Output() addToCart = new EventEmitter<any>();
 

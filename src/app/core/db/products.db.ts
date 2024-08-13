@@ -11,6 +11,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: [],
     discount: 20,
     ratings: 5,
+    isSelected: false,
   },
   {
     id:1,
@@ -21,6 +22,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: ['Run', 'Dress'],
     discount: 20,
     ratings: 3,
+    isSelected: false,
   },
   {
     id:2,
@@ -31,6 +33,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: ['Run', 'Dress'],
     discount: 20,
     ratings: 4,
+    isSelected: false,
   },
   {
     id:3,
@@ -41,6 +44,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: ['Run', 'Dress'],
     discount: 20,
     ratings: 3,
+    isSelected: false,
   },
   {
     id:4,
@@ -51,6 +55,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: ['Run', 'Dress'],
     discount: 20,
     ratings: 3,
+    isSelected: false,
   },
   {
     id:5,
@@ -61,6 +66,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: [],
     discount: 0,
     ratings: 2,
+    isSelected: false,
   },
   {
     id:6,
@@ -71,6 +77,7 @@ export const PRODUCTS_DB: Product[] = [
     tags: ['Run', 'Dress'],
     discount: 20,
     ratings: 2,
+    isSelected: false,
   },
   {
     id:7,
@@ -80,5 +87,6 @@ export const PRODUCTS_DB: Product[] = [
     title: 'Product 8',
     tags: ['Run', 'Dress'],
     discount: 0,
+    isSelected: false,
   },
 ];

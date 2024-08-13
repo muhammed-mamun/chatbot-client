@@ -14,7 +14,6 @@ import { PRODUCTS_DB } from '../../core/db/products.db';
 })
 export class ProductsComponent {
 
-
   public totalPrice: number = 0;
   public selectedProducts: Product[] = [];
 
@@ -22,13 +21,18 @@ export class ProductsComponent {
     console.log('Data from child is', data);
     const existingProductIndex = this.selectedProducts.findIndex(p => p.id === data.id);
     if (existingProductIndex === -1) {
+      data.isSelected = true;
       this.selectedProducts.push(data);
       this.totalPrice += data.price;
+      
       console.log("Selected Products: ", this.selectedProducts);
+      // console.log("Products: ", this.products);
     } else {
       this.selectedProducts.splice(existingProductIndex, 1);
       this.totalPrice -= data.price;
+      data.isSelected = false;
       console.log("Selected Products: ", this.selectedProducts);
+      // console.log("Products: ", this.products);
     }
 
   }
